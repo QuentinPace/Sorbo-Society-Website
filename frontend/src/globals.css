@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- BASE THEME VARIABLES --- */
+:root {
+  /* --- BLUE & WHITE THEME --- */
+
+  /*Popovers*/
+  --popover: #ffffff;
+  /* Core Brand Palette */
+  --brand-primary: #007BFF;
+  --brand-accent: #4D9FFF;
+  --brand-tint: #E6F2FF;
+  --brand-dark: #0A2540;
+  --brand-bg: #FFFFFF;
+  --brand-white: #FFFFFF;
+
+  /* Typography */
+  --brand-text: var(--brand-dark);
+  --brand-subtext: #5A6978;
+
+  /* Gradient Variations */
+  --brand-blue-light: #4D9FFF;
+  --brand-blue-dark: #0056B3;
+
+  /* Card Themes */
+  --brand-card-1-light: #DCEEFF;
+  --brand-card-1: #BEDAFF;
+  --brand-card-2-light: #D1E9FF;
+  --brand-card-2: #A8D5FF;
+
+  /* Font Families */
+  --font-heading: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Roboto", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Radius + Colors (for shadcn/ui style vars) */
+  --radius: 0.625rem;
+  --background: #ffffff;
+  --foreground: #0a2540;
+  --card: #ffffff;
+  --card-foreground: #0a2540;
+  --primary: #007BFF;
+  --primary-foreground: #ffffff;
+  --secondary: #e6f2ff;
+  --secondary-foreground: #0a2540;
+  --border: #d1d5db;
+  --input: #f3f4f6;
+  --ring: #4D9FFF;
+}
+
+/* --- DARK MODE --- */
+.dark {
+  --background: #0a2540;
+  --foreground: #e6f2ff;
+  --card: #172a45;
+  --card-foreground: #e6f2ff;
+  --primary: #4D9FFF;
+  --primary-foreground: #0a2540;
+  --secondary: #1b3359;
+  --secondary-foreground: #e6f2ff;
+  --border: #1e3a8a;
+  --input: #1e3a8a;
+  --ring: #4D9FFF;
+}
+
+/* --- BASE & TYPOGRAPHY --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)] font-[var(--font-body)] antialiased;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  * {
+    @apply border-[var(--border)] outline-[color:var(--ring)];
+  }
+}
+
+/* --- UTILITIES --- */
+@layer utilities {
+  /* Text colors */
+  .text-brand-primary { color: var(--brand-primary); }
+  .text-brand-accent { color: var(--brand-accent); }
+  .text-brand-dark { color: var(--brand-dark); }
+  .text-brand-white { color: var(--brand-white); }
+  .text-brand-text { color: var(--brand-text); }
+  .text-brand-subtext { color: var(--brand-subtext); }
+
+  /* Background colors */
+  .bg-brand-primary { background-color: var(--brand-primary); }
+  .bg-brand-accent { background-color: var(--brand-accent); }
+  .bg-brand-dark { background-color: var(--brand-dark); }
+  .bg-brand-tint { background-color: var(--brand-tint); }
+  .bg-brand-bg { background-color: var(--brand-bg); }
+  .bg-brand-white { background-color: var(--brand-white); }
+  .bg-brand-card-1-light { background-color: var(--brand-card-1-light); }
+  .bg-brand-card-2-light { background-color: var(--brand-card-2-light); }
+
+  /* Gradient utilities */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, var(--brand-blue-dark) 0%, var(--brand-blue-light) 100%);
+  }
+  .bg-gradient-primary-reverse {
+    background: linear-gradient(135deg, var(--brand-blue-light) 0%, var(--brand-blue-dark) 100%);
+  }
+
+  /* Borders */
+  .border-brand-primary { border-color: var(--brand-primary); }
+  .border-brand-accent { border-color: var(--brand-accent); }
+  .border-brand-dark { border-color: var(--brand-dark); }
+
+  /* Scroll utilities */
+  .scroll-horizontal {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scroll-vertical {
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* 3D utilities */
+  .perspective { perspective: 1000px; }
+  .transform-style { transform-style: preserve-3d; }
+  .backface-hidden { backface-visibility: hidden; }
+  .rotate-y-180 { transform: rotateY(180deg); }
+  .preserve-3d { transform-style: preserve-3d; }
+}
