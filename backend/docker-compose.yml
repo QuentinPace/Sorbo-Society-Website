@@ -5,13 +5,13 @@ services:
     image: postgres:16
     restart: unless-stopped
     ports:
-      - "5432:5432"
+      - "5433:5432"
     environment:
-      POSTGRES_USER: dev
-      POSTGRES_PASSWORD: dev
-      POSTGRES_DB: appdb
+      POSTGRES_USER: dev_1
+      POSTGRES_PASSWORD: dev_1
+      POSTGRES_DB: appdb_1
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - postgres_data_1:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+  postgres_data_1:

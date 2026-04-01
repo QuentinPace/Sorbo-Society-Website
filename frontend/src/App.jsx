@@ -1,20 +1,24 @@
 import { Outlet } from "react-router-dom";
-import { useEffect } from "react";
 import Navbar from "./components/Navbar";
-import { useUserStore } from "./store/user";
+import Footer from "./components/Footer";
+// import { useEffect } from "react";
+// import { useUserStore } from "./store/user";
 
 const App = () => {
-  const hydrateUser = useUserStore((state) => state.hydrateUser);
+  // const hydrateUser = useUserStore((state) => state.hydrateUser);
 
-  useEffect(() => {
-    // put all state meta data fetches here
-    hydrateUser();
-  }, []);
+  // useEffect(() => {
+  //   // put all state meta data fetches here
+  //   // hydrateUser();
+  // }, []);
 
-  return <>
-            <Outlet />
-        </>
-;
+  return (
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
+  );
 };
 
 export default App;

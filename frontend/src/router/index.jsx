@@ -3,8 +3,8 @@ import SignUpPage from "../components/Signup/SignUpPage";
 import ProtectedRoute from "../components/ProtectedRoute";
 import App from "../App";
 import LoginPage from "../components/Login/LoginPage";
+import LandingPage from "../components/Landing/Landing";
 import DashboardPage from "../components/Dashboard/DashboardPage";
-import Landing from "../components/landing/Landing";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Landing />
+        element: <LandingPage />,
       },
       {
         path: "/signup",
