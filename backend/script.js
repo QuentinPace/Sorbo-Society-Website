@@ -36,7 +36,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // dev frontend
-      "https://sorbosociety.com", // production frontend
+      "https://sorbo-society-website.onrender.com/", // production frontend
     ],
     credentials: true,
   }),

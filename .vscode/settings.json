@@ -1,2 +1,19 @@
 {
+  "sqltools.connections": [
+    {
+      "pgOptions": {
+        "ssl": {
+          "rejectUnauthorized": true
+        }
+      },
+      "ssh": "Disabled",
+      "previewLimit": 50,
+      "server": "localhost",
+      "driver": "PostgreSQL",
+      "name": "SORBO-prod",
+      "database": "sorbo_postgresql",
+      "username": "sorbo_postgresql_user",
+      "connectString": "postgresql://sorbo_postgresql_user:9FxPcAStTzGp00dw2bumnGSGcTXDFOTr@dpg-d76gd5450q8c73agdsh0-a.ohio-postgres.render.com/sorbo_postgresql"
+    }
+  ]
 }
