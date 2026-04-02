@@ -3,7 +3,7 @@ import SignUpPage from "../components/Signup/SignUpPage.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import App from "../App";
 import LoginPage from "../components/Login/LoginPage.jsx";
-import LandingPage from "../components/Landing/Landing.jsx";
+import LandingPage from "../components/landing/Landing.jsx";
 import DashboardPage from "../components/Dashboard/DashboardPage.jsx";
 
 export const router = createBrowserRouter([
