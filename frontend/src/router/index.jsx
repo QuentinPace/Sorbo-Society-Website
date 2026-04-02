@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import SignUpPage from "../components/Signup/SignUpPage";
-import ProtectedRoute from "../components/ProtectedRoute";
+import SignUpPage from "../components/Signup/SignUpPage.jsx";
+import ProtectedRoute from "../components/ProtectedRoute.jsx";
 import App from "../App";
-import LoginPage from "../components/Login/LoginPage";
-import LandingPage from "../components/Landing/Landing";
-import DashboardPage from "../components/Dashboard/DashboardPage";
+import LoginPage from "../components/Login/LoginPage.jsx";
+import LandingPage from "../components/Landing/Landing.jsx";
+import DashboardPage from "../components/Dashboard/DashboardPage.jsx";
 
 export const router = createBrowserRouter([
   {
