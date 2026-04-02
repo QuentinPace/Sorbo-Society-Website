@@ -158,7 +158,7 @@ export default function LandingPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <img
-              src="../public/SORBO-small.png"
+              src="../SORBO-small.png"
               alt="SORBO Logo"
               className="h-80 mx-auto block"
             />
