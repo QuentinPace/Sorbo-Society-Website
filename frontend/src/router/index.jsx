@@ -5,6 +5,8 @@ import App from "../App";
 import LoginPage from "../components/Login/LoginPage.jsx";
 import LandingPage from "../components/landing/Landing.jsx";
 import DashboardPage from "../components/Dashboard/DashboardPage.jsx";
+import NotFound from "../components/NotFound/NotFound.jsx";
+import DiscoveryBox from "../components/DiscoveryBox/DiscoveryBox.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -15,21 +17,29 @@ export const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/signup",
-        element: <SignUpPage />,
+        path: "/discovery-box",
+        element: <DiscoveryBox />,
       },
       {
-        path: "/login",
-        element: <LoginPage />,
+        path: "*",
+        element: <NotFound />,
       },
-      {
-        path: "/dashboard",
-        element: (
-          <ProtectedRoute>
-            <DashboardPage />
-          </ProtectedRoute>
-        ),
-      },
+      // {
+      //   path: "/signup",
+      //   element: <SignUpPage />,
+      // },
+      // {
+      //   path: "/login",
+      //   element: <LoginPage />,
+      // },
+      // {
+      //   path: "/dashboard",
+      //   element: (
+      //     <ProtectedRoute>
+      //       <DashboardPage />
+      //     </ProtectedRoute>
+      //   ),
+      // },
     ],
   },
 ]);
